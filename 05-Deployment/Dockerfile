@@ -23,7 +23,7 @@ COPY ["Pipfile","Pipfile.lock","./"]
 #but we need to install all the dependencies from the Pipfile to the container/system python
 
 # we use a special key that is system it will install without creating a virtual environment and then deploy the libraries that are in pipfile
-RUN pipenv --deploy  
+RUN pipenv install --system --deploy  
 
 #Copying the predict and model file to the container
 COPY ["predict_flask.py","model_C=1.0.bin","./"] 
