@@ -44,4 +44,4 @@ ENTRYPOINT ["waitress", "--listen=0.0.0.0:9696", "predict_flask:app"]
 #docker run --it --rm --entrypoint:bash zoomcamp-test
 #but since we already defined entry point so we can skip that also we did exposed the 9696 port of the docker image but we need to map it to the host machine hence now the final command will be like this
 
-#docker run --it --rm -p 9696:9696
+#docker run -it --rm -p 9696:9696 zoomcamp-test
