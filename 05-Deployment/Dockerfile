@@ -36,7 +36,7 @@ EXPOSE 9696
 
 #WE SPECIFY  the entrypoint as terminal when we run the docker run command and when we skip that then it launches python since that is the default entrypoint but what we want to do when we run the docker image is that we want to run our web service using waitress hence we need to override the entrypoint.
 # since every word should be separate here using commas.Hence we have written the command like this
-ENTRYPOINT ["waitress", "--listen=0.0.0.0:9696", "predict_flask:app"]
+ENTRYPOINT ["python","-m","waitress", "--listen=0.0.0.0:9696", "predict_flask:app"]
 # Now we can build the image and and run the image as following 
 #docker built -t zoomcamp-test .  #-t referes to tech and we gave the tech name zoomcamp-test and the dot (.) refers that build the image based on the image in current directory
 
