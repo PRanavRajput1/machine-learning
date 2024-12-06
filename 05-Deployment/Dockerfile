@@ -7,7 +7,7 @@
 FROM python:3.8.12-slim  
 
 #installing virtual environment in our image
-RUN pip install pipenv
+RUN pip install --upgrade pipenv
 
 #now since our project uses pipfile and pipfile lock. hence we want to copy these files to our container
 
