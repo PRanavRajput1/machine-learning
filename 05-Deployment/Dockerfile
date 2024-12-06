@@ -31,6 +31,7 @@ COPY ["predict_flask.py","model_C=1.0.bin","./"]
 RUN pip install waitress
 RUN pip install flask
 RUN pip install sklearn
+RUN pip install numpy
 #now once you built this image and then run it and then serve the model using waitress then it works and run runs on 9696 port but this port of the container needs to be exposed so that our host machine can interact with it.
 
 EXPOSE 9696
